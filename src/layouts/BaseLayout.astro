@@ -12,16 +12,21 @@ const { pageTitle } = Astro.props;
 		<meta name='generator' content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-	<body>
+	<body class="container mx-auto">
 		<header>
-			<a href='/'>Home</a>
-			<a href='/about'>About</a>
-			<a href='/blog'>Blog</a>
+			<nav class="flex justify-between p-4">
+				<p class="font-bold"><a href='/blog'>Blog</a></p>
+				<ul class="flex gap-8">
+					<li><a href='/'>Home</a></li>
+					<li><a href='/about'>About</a></li>
+					<li><a href='/blog'>Blog</a></li>
+				</ul>
+			</nav>
 		</header>
-		<main>
+		<main class="flex flex-grow flex-col justify-center items-center">
 			<slot />
 		</main>
-		<footer>
+		<footer class="flex justify-center p-4">
 			<p>©sarassaura, 2023. All rights reserved.</p>
 		</footer>
 	</body>
