@@ -1,26 +1,9 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
 
+const pageTitle = 'About Me';
 ---
 
-<!doctype html>
-<html lang='en'>
-	<head>
-		<meta charset='utf-8' />
-		<meta name='viewport' content='width=device-width' />
-		<meta name='generator' content={Astro.generator} />
-		<title>Blog</title>
-	</head>
-	<body>
-		<header>
-			<a href='/'>Home</a>
-			<a href='/about/'>About</a>
-			<a href='/blog'>Blog</a>
-		</header>
-		<main>
-			<p>About</p>
-		</main>
-		<footer>
-			<p>©sarassaura, 2023. All rights reserved.</p>
-		</footer>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<p>About</p>
+</BaseLayout>
