@@ -4,7 +4,7 @@ const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout pageTitle={frontmatter.title}>
-	<div>
+	<div class='flex flex-col flex-grow'>
 		<h1 class='text-4xl'>{frontmatter.title}</h1>
 		<small class='mb-4'
 			>by {frontmatter.author} &#128900; {

@@ -20,7 +20,7 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 				</p>
 				<small class='mb-4'>by {author} &#128900; {pubDate.slice(0, 10)}</small>
 				<p class='mb-6'>{description}</p>
-				<div class='flex gap-6'>
+				<div class='flex gap-2'>
 					{
 						tags.map((tag: string) => (
 							<p class='border border-black p-1 rounded'>{tag}</p>
