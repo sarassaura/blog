@@ -1,24 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from './../components/PostCard.astro';
 const pageTitle = 'Blog';
+const allPosts = await Astro.glob('./posts/*.md');
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<ul class='flex flex-col gap-4'>
-		<li class='border border-black rounded'>
-			<a href='/posts/post-1/'>
-				<p class='p-4'>Post 1</p>
-			</a>
-		</li>
-		<li class='border border-black rounded'>
-			<a href='/posts/post-2/'>
-				<p class='p-4'>Post 2</p>
-			</a>
-		</li>
-		<li class='border border-black rounded'>
-			<a href='/posts/post-3/'>
-				<p class='p-4'>Post 3</p>
-			</a>
-		</li>
+		<h1 class='text-4xl'>Articles</h1>
+		{allPosts.map((post) => <PostCard {post} />)}
 	</ul>
 </BaseLayout>

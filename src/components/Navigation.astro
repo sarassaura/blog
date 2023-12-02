@@ -1,0 +1,28 @@
+---
+import { Icon } from 'astro-icon';
+---
+
+<nav class='flex justify-between p-4'>
+	<a href='/blog' class='flex justify-center items-center'>
+		<Icon name='la:blog' class='mr-2 h-12 w-12' />
+
+		<p class='font-bold text-lg p-2 pl-0'>Blog</p>
+	</a>
+	<ul class='flex gap-6 items-center'>
+		<li>
+			<a href='/'>
+				<p class='p-2'>Home</p>
+			</a>
+		</li>
+		<li>
+			<a href='/about'>
+				<p class='p-2'>About</p>
+			</a>
+		</li>
+		<li>
+			<a href='/blog'>
+				<p class='p-2'>Blog</p>
+			</a>
+		</li>
+	</ul>
+</nav>

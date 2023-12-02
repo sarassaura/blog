@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Navigation from './../components/Navigation.astro';
+import Footer from './../components/Footer.astro';
 
 const { pageTitle } = Astro.props;
 ---
@@ -12,37 +14,15 @@ const { pageTitle } = Astro.props;
 		<meta name='generator' content={Astro.generator} />
 		<title>{pageTitle}</title>
 	</head>
-	<body class='container mx-auto'>
-		<header>
-			<nav class='flex justify-between p-4'>
-				<a href='/blog' class='flex justify-center items-center'>
-					<div class='w-12 h-12 bg-slate-300 mr-2 rounded'></div>
-					<p class='font-bold text-lg p-2 pl-0'>Blog</p>
-				</a>
-				<ul class='flex gap-6 items-center'>
-					<li>
-						<a href='/'>
-							<p class='p-2'>Home</p>
-						</a>
-					</li>
-					<li>
-						<a href='/about'>
-							<p class='p-2'>About</p>
-						</a>
-					</li>
-					<li>
-						<a href='/blog'>
-							<p class='p-2'>Blog</p>
-						</a>
-					</li>
-				</ul>
-			</nav>
+	<body class='container mx-auto bg-slate-300'>
+		<header class='bg-slate-100'>
+			<Navigation />
 		</header>
-		<main class='flex flex-grow flex-col justify-center items-center'>
+		<main
+			class='flex flex-grow flex-col justify-center items-center bg-slate-200 py-8'
+		>
 			<slot />
 		</main>
-		<footer class='flex justify-center p-4'>
-			<p>©sarassaura, 2023. All rights reserved.</p>
-		</footer>
+		<Footer />
 	</body>
 </html>

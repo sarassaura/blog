@@ -1,0 +1,33 @@
+---
+const { post } = Astro.props;
+const url = post.url;
+const { image, title, pubDate, author, description, tags } = post.frontmatter;
+---
+
+<li class='border border-black rounded'>
+	<a href={url}>
+		<div class='p-4 flex gap-4'>
+			<img
+				src={image.url}
+				alt={image.alt}
+				height='150px'
+				width='300px'
+				object-fit='scale-down'
+			/>
+			<div class='flex flex-col'>
+				<p class='text-2xl font-bold mb-1'>
+					{title}
+				</p>
+				<small class='mb-4'>by {author} &#128900; {pubDate.slice(0, 10)}</small>
+				<p class='mb-6'>{description}</p>
+				<div class='flex gap-6'>
+					{
+						tags.map((tag: string) => (
+							<p class='border border-black p-1 rounded'>{tag}</p>
+						))
+					}
+				</div>
+			</div>
+		</div>
+	</a>
+</li>
