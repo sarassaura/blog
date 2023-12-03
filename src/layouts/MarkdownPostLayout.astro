@@ -1,5 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import { Image } from 'astro:assets';
+
 const { frontmatter } = Astro.props;
 ---
 
@@ -11,9 +13,10 @@ const { frontmatter } = Astro.props;
 				frontmatter.pubDate.slice(0, 10)
 			}</small
 		>
-		<img
+		<Image
 			src={frontmatter.image.url}
-			width='300'
+			width={300}
+			height={150}
 			alt={frontmatter.image.alt}
 			class='my-8'
 		/>
