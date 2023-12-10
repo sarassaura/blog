@@ -18,6 +18,7 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 				width={300}
 				height={150}
 				class='rounded-l'
+				transition:name={image.alt}
 			/>
 		</a>
 		<div class='flex flex-col m-4'>
@@ -41,7 +42,7 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 				{
 					tags.map((tag: string) => {
 						return (
-							<a href={"/categories/" + tag.replaceAll(' ', '-').toLowerCase()}>
+							<a href={'/categories/' + tag.replaceAll(' ', '-').toLowerCase()}>
 								<p class='border border-black p-1 rounded hover:bg-black hover:text-white'>
 									{tag}
 								</p>

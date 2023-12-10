@@ -24,6 +24,7 @@ const { frontmatter } = Astro.props;
 			height={150}
 			alt={frontmatter.image.alt}
 			class='my-8'
+			transition:name={frontmatter.image.alt}
 		/>
 		<slot />
 	</div>
