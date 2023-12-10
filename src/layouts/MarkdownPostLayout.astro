@@ -20,11 +20,15 @@ const { frontmatter } = Astro.props;
 		>
 		<Image
 			src={frontmatter.image.url}
+			alt={frontmatter.image.alt}
+			object-fit='cover'
+			decoding='async'
+			quality='low'
+			format='webp'
 			width={300}
 			height={150}
-			alt={frontmatter.image.alt}
-			class='my-8'
-			transition:name={frontmatter.image.alt}
+			class='rounded-l my-8'
+			transition:name='img'
 		/>
 		<slot />
 	</div>

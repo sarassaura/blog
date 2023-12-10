@@ -18,12 +18,13 @@ import favicon from '../../public/favicon.svg';
 		<title>{pageTitle}</title>
 		<ViewTransitions />
 	</head>
-	<body class='container mx-auto bg-slate-300'>
+	<body class='container mx-auto bg-slate-300' transition:animate='none'>
 		<header class='bg-slate-100'>
 			<Navigation />
 		</header>
 		<main
 			class='flex flex-grow flex-col justify-center items-center bg-slate-200 py-8'
+			transition:animate='slide'
 		>
 			<slot />
 		</main>
