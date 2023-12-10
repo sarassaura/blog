@@ -6,8 +6,8 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 ---
 
 <li class='border border-black rounded'>
-	<a href={url}>
-		<div class='p-4 flex gap-4'>
+	<div class='p-4 flex gap-4'>
+		<a href={url} class='flex justify-center items-center bg-black rounded p-2'>
 			<Image
 				src={image.url}
 				alt={image.alt}
@@ -17,21 +17,24 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 				format='webp'
 				width={300}
 				height={150}
+				class='rounded'
 			/>
-			<div class='flex flex-col'>
-				<p class='text-2xl font-bold mb-1'>
+		</a>
+		<div class='flex flex-col'>
+			<a href={url}>
+				<p class='text-2xl font-bold mb-1 hover:underline'>
 					{title}
 				</p>
-				<small class='mb-4'>by {author} &#128900; {pubDate.slice(0, 10)}</small>
-				<p class='mb-6'>{description}</p>
-				<div class='flex gap-2'>
-					{
-						tags.map((tag: string) => (
-							<p class='border border-black p-1 rounded'>{tag}</p>
-						))
-					}
-				</div>
+			</a>
+			<small class='mb-4'>by {author} &#128900; {pubDate.slice(0, 10)}</small>
+			<p class='mb-6'>{description}</p>
+			<div class='flex gap-2'>
+				{
+					tags.map((tag: string) => (
+						<p class='border border-black p-1 rounded'>{tag}</p>
+					))
+				}
 			</div>
 		</div>
-	</a>
+	</div>
 </li>
