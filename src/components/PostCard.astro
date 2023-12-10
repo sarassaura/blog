@@ -6,27 +6,36 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 ---
 
 <li class='border border-black rounded'>
-	<div class='p-4 flex gap-4'>
-		<a href={url} class='flex justify-center items-center bg-black rounded p-2'>
+	<div class='rounded flex'>
+		<a href={url} class='flex justify-center items-center bg-black p-2'>
 			<Image
 				src={image.url}
 				alt={image.alt}
-				object-fit='scale-down'
+				object-fit='cover'
 				decoding='async'
 				quality='low'
 				format='webp'
 				width={300}
 				height={150}
-				class='rounded'
+				class='rounded-l'
 			/>
 		</a>
-		<div class='flex flex-col'>
+		<div class='flex flex-col m-4'>
 			<a href={url}>
 				<p class='text-2xl font-bold mb-1 hover:underline'>
 					{title}
 				</p>
 			</a>
-			<small class='mb-4'>by {author} &#128900; {pubDate.slice(0, 10)}</small>
+			<small class='mb-4'
+				>by
+				<a
+					href=`/author/${author.replace(' ', '-').toLowerCase()}`
+					class='hover:line-through'
+				>
+					{author}
+				</a>
+				 &#128900; {pubDate.slice(0, 10)}</small
+			>
 			<p class='mb-6'>{description}</p>
 			<div class='flex gap-2'>
 				{

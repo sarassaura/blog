@@ -7,7 +7,7 @@ const allPosts = await Astro.glob('./posts/*.md');
 
 <BaseLayout pageTitle={pageTitle}>
 	<ul class='flex flex-col gap-4'>
-		<h1 class='text-4xl'>Articles</h1>
+		<h1 class='text-4xl mb-4'>Articles</h1>
 		{allPosts.map((post) => <PostCard {post} />)}
 	</ul>
 </BaseLayout>
