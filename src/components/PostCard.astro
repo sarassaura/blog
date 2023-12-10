@@ -29,7 +29,7 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 			<small class='mb-4'
 				>by
 				<a
-					href=`/author/${author.replace(' ', '-').toLowerCase()}`
+					href=`/author/${author.replaceAll(' ', '-').toLowerCase()}`
 					class='hover:line-through'
 				>
 					{author}
@@ -39,9 +39,15 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 			<p class='mb-6'>{description}</p>
 			<div class='flex gap-2'>
 				{
-					tags.map((tag: string) => (
-						<p class='border border-black p-1 rounded'>{tag}</p>
-					))
+					tags.map((tag: string) => {
+						return (
+							<a href={"/categories/" + tag.replaceAll(' ', '-').toLowerCase()}>
+								<p class='border border-black p-1 rounded hover:bg-black hover:text-white'>
+									{tag}
+								</p>
+							</a>
+						);
+					})
 				}
 			</div>
 		</div>

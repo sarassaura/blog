@@ -11,7 +11,7 @@ const { frontmatter } = Astro.props;
 		<small class='mb-4'
 			>by
 			<a
-				href=`/author/${frontmatter.author.replace(' ', '-').toLowerCase()}`
+				href=`/author/${frontmatter.author.replaceAll(' ', '-').toLowerCase()}`
 				class='hover:line-through'
 			>
 				{frontmatter.author}
