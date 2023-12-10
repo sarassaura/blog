@@ -6,8 +6,5 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://blog-six-sable-37.vercel.app/',
-	integrations: [mdx(), sitemap(), tailwind()],
-	prefetch: {
-		prefetchAll: true
-	}
+	integrations: [mdx(), sitemap(), tailwind()]
 });
