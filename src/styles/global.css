@@ -1,14 +1,9 @@
-@font-face {
-	font-family: 'DistantGalaxy';
-	src: url('/fonts/DistantGalaxy.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
-}
+@import '@fontsource-variable/inter';
 
 html,
 body {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
+	font-family: 'Inter Variable', sans-serif;
 }
