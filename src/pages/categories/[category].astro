@@ -7,7 +7,7 @@ export async function getStaticPaths() {
 	const categories = new Set();
 
 	allPosts.map((post, id) => {
-		post.frontmatter.tags?.forEach((tag, num) => {
+		post.frontmatter.tags?.forEach((tag: string, num: number) => {
 			allPosts[id].frontmatter.tags[num] = tag
 				.replaceAll(' ', '-')
 				.toLowerCase();
@@ -27,8 +27,26 @@ export async function getStaticPaths() {
 const { category } = Astro.params;
 const { posts } = Astro.props;
 
-const filteredPosts = posts.filter((post) =>
-	post.frontmatter.tags?.includes(category)
+const filteredPosts: Array<{
+	frontmatter: {
+		image: string;
+		title: string;
+		pubDate: string;
+		author: string;
+		description: string;
+		tags: string;
+	};
+}> = posts.filter(
+	(post: {
+		frontmatter: {
+			image: string;
+			title: string;
+			pubDate: string;
+			author: string;
+			description: string;
+			tags: string;
+		};
+	}) => post.frontmatter.tags?.includes(category as string)
 );
 ---
 

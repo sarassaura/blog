@@ -25,7 +25,27 @@ export async function getStaticPaths() {
 const { writer } = Astro.params;
 const { posts } = Astro.props;
 
-const filteredPosts = posts.filter((post) => post.frontmatter.author == writer);
+const filteredPosts: Array<{
+	frontmatter: {
+		image: string;
+		title: string;
+		pubDate: string;
+		author: string;
+		description: string;
+		tags: string;
+	};
+}> = posts.filter(
+	(post: {
+		frontmatter: {
+			image: string;
+			title: string;
+			pubDate: string;
+			author: string;
+			description: string;
+			tags: string;
+		};
+	}) => post.frontmatter.author == writer
+);
 ---
 
 <BaseLayout>
