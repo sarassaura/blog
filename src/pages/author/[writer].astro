@@ -48,7 +48,11 @@ const filteredPosts: Array<{
 );
 ---
 
-<BaseLayout>
+<BaseLayout
+	pageTitle={writer
+		?.replaceAll('-', ' ')
+		.replace(/\b(\w)/g, (s) => s.toUpperCase())}
+>
 	<ul class='flex flex-col gap-4 mx-6'>
 		<h1 class='text-4xl mb-4'>
 			Written by <span class='capitalize font-medium'

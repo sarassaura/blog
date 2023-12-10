@@ -50,7 +50,7 @@ const filteredPosts: Array<{
 );
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={'Blog | ' + category!.replaceAll('-', ' ')}>
 	<ul class='flex flex-col gap-4'>
 		<h1 class='text-4xl mb-4'>
 			Posts with <span class='underline decoration-sky-500'
