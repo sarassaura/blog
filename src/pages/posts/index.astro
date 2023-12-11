@@ -1,13 +1,12 @@
 ---
+import CardContainer from '../../components/CardContainer.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import PostCard from './../../components/PostCard.astro';
+
 const pageTitle = 'Blog';
 const allPosts = await Astro.glob('./*.md');
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<ul class='flex flex-col gap-4 mx-6'>
-		<h1 class='text-4xl mb-4'>Articles</h1>
-		{allPosts.map((post) => <PostCard {post} />)}
-	</ul>
+	<h1 class='text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-4'>Articles</h1>
+	<CardContainer filteredPosts={allPosts} />
 </BaseLayout>

@@ -1,0 +1,21 @@
+---
+import PostCard from './PostCard.astro';
+const { filteredPosts } = Astro.props;
+---
+
+<ul class='flex flex-col gap-4'>
+	{
+		filteredPosts.map(
+			(post: {
+				frontmatter: {
+					image: string;
+					title: string;
+					pubDate: string;
+					author: string;
+					description: string;
+					tags: string;
+				};
+			}) => <PostCard {post} />
+		)
+	}
+</ul>

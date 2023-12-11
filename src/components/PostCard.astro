@@ -6,12 +6,15 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 ---
 
 <li class='border border-black rounded'>
-	<div class='rounded flex'>
-		<a href={url} class='flex justify-center items-center bg-black p-2'>
+	<div class='rounded grid md:grid-cols-2'>
+		<a
+			href={url}
+			class='flex justify-center items-center bg-black p-2 min-h-[150px] sm:min-h-[150px]'
+		>
 			<Image
 				src={image.url}
 				alt={image.alt}
-				object-fit='cover'
+				object-fit='scale-down'
 				decoding='async'
 				quality='low'
 				format='webp'
@@ -22,16 +25,16 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 			/>
 		</a>
 		<div class='flex flex-col m-4'>
-			<a href={url}>
+			<a href={url} class='flex justify-center md:justify-start'>
 				<p
-					class='text-2xl font-bold mb-1 hover:underline'
+					class='text-lg md:text-xl lg:text-2xl font-bold mb-1 hover:underline'
 					transition:name={title}
 				>
 					{title}
 				</p>
 			</a>
-			<small class='mb-4'
-				>by
+			<small class='mb-4 flex justify-center md:justify-start sm:text-sm'
+				>by&nbsp;
 				<a
 					href=`/author/${author.replaceAll(' ', '-').toLowerCase()}`
 					class='hover:line-through'
@@ -40,14 +43,14 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 				</a>
 				 &#128900; {pubDate.slice(0, 10)}</small
 			>
-			<p class='mb-6'>{description}</p>
-			<div class='flex gap-2'>
+			<p class='mb-6 flex justify-center md:justify-start'>{description}</p>
+			<div class='flex flex-wrap gap-2 justify-center md:justify-start'>
 				{
 					tags.map((tag: string) => {
 						return (
 							<a href={'/categories/' + tag.replaceAll(' ', '-').toLowerCase()}>
-								<p class='border border-black p-1 rounded hover:bg-black hover:text-white'>
-									{tag}
+								<p class='whitespace-nowrap border border-black p-1 rounded hover:bg-black hover:text-white'>
+									{tag.replaceAll(' ', '-').toLowerCase()}
 								</p>
 							</a>
 						);
