@@ -11,8 +11,8 @@ const { frontmatter } = Astro.props;
 		<h1 class='text-heading-2 mb-1' transition:name={frontmatter.title}>
 			{frontmatter.title}
 		</h1>
-		<small class='mb-4'
-			>by
+		<span class='text-caption mb-4'>
+			by
 			<a
 				href=`/author/${slugify(frontmatter.author)}`
 				class='hover:line-through'
@@ -20,7 +20,7 @@ const { frontmatter } = Astro.props;
 				{titlefy(frontmatter.author)}
 			</a>
 			 &#x2981; {datefy(frontmatter.pubDate)}
-		</small>
+		</span>
 		<Image
 			src={frontmatter.image.url}
 			alt={frontmatter.image.alt}
