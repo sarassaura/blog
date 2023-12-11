@@ -15,71 +15,74 @@ body {
 	min-height: 100%;
 }
 
+header,
+footer {
+	@apply bg-slate-100;
+}
+
+body,
+main {
+	@apply bg-slate-200;
+}
+
 @media (width <= 640px) {
 	.container {
 		max-width: 640px;
 	}
 }
 
-.text-display {
-	@apply text-lg xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+.display {
+	@apply text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
 }
 
-.text-heading-1 {
-	@apply text-base xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl;
+.h1 {
+	@apply text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl;
 }
 
-.text-heading-2 {
+.h2 {
 	@apply text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl;
 }
 
-.text-heading-3 {
-	@apply text-base xs:text-lg md:text-xl lg:text-2xl;
-}
-
-.text-heading-4 {
-	@apply text-sm xs:text-base md:text-lg lg:text-xl;
-}
-
-.text-heading-5 {
-	@apply text-sm sm:text-lg md:text-base;
-}
-
-.text-heading-6 {
-	@apply text-sm md:text-base;
+.h3 {
+	@apply text-base sm:text-lg md:text-xl;
 }
 
 .text-paragraph {
-	@apply text-xs xs:text-sm sm:text-base;
+	@apply text-base;
 }
 
 .text-caption {
-	@apply text-xs xs:text-xs sm:text-sm;
+	@apply text-xs xs:text-sm;
 }
 
 .mdx {
 	h1 {
-		@apply text-heading-1;
+		@apply h1;
 	}
 	h2 {
-		@apply text-heading-2;
+		@apply h2;
 	}
 	h3 {
-		@apply text-heading-3;
+		@apply h3;
 	}
-	h4 {
-		@apply text-heading-4;
-	}
-	h5 {
-		@apply text-heading-5;
-	}
-	h6 {
-		@apply text-heading-6;
-	}
-	p {
-		@apply my-2 leading-6;
-	}
-	p {
-		@apply my-4 leading-6;
-	}
+}
+
+.space-margin {
+	@apply px-3 py-3;
+}
+
+.space-items {
+	@apply gap-6;
+}
+
+.space-cards {
+	@apply gap-8 md:gap-6 xl:gap-10;
+}
+
+.cardContainer {
+	@apply grid lg:grid-cols-2 xl:grid-cols-3;
+}
+
+.card {
+	@apply grid md:grid-cols-2 lg:grid-cols-1 border-2 border-black rounded;
 }

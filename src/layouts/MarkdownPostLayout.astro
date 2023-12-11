@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={frontmatter.title}>
 	<div class='flex flex-col flex-grow'>
-		<h1 class='text-heading-1 mb-1' transition:name={frontmatter.title}>
+		<h1 class='h1 mb-1' transition:name={frontmatter.title}>
 			{frontmatter.title}
 		</h1>
 		<span class='text-caption mb-4'>

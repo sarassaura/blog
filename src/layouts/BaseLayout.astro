@@ -18,11 +18,11 @@ import favicon from '../../public/favicon.svg';
 		<title>{pageTitle}</title>
 		<ViewTransitions />
 	</head>
-	<body class='container mx-auto bg-slate-300'>
-		<header class='bg-slate-100'>
+	<body class='container mx-auto'>
+		<header>
 			<Navigation />
 		</header>
-		<main class='flex flex-grow flex-col px-6 bg-slate-200 py-8'>
+		<main class='flex flex-grow flex-col space-margin'>
 			<slot />
 		</main>
 		<Footer />

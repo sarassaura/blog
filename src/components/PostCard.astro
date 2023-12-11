@@ -6,61 +6,56 @@ const url = post.url;
 const { image, title, pubDate, author, description, tags } = post.frontmatter;
 ---
 
-<li class='border border-black rounded'>
-	<div class='rounded grid md:grid-cols-2 lg:grid-cols-1'>
-		<a
-			href={url}
-			class='flex justify-center items-center bg-black min-h-[150px] sm:min-h-[150px]'
-		>
-			<div class='h-[150px] flex items-center justify-center'>
-				<Image
-					src={image.url}
-					alt={image.alt}
-					object-fit='scale-down'
-					decoding='async'
-					quality='low'
-					format='webp'
-					width={300}
-					height={150}
-					class='max-h-[150px]'
-					transition:name={image.alt}
-				/>
-			</div>
+<li class='card'>
+	<a
+		href={url}
+		class='flex justify-center items-center bg-black min-h-[150px] sm:min-h-[150px]'
+	>
+		<div class='h-[150px] flex items-center justify-center'>
+			<Image
+				src={image.url}
+				alt={image.alt}
+				object-fit='scale-down'
+				decoding='async'
+				quality='low'
+				format='webp'
+				width={300}
+				height={150}
+				class='max-h-[150px]'
+				transition:name={image.alt}
+			/>
+		</div>
+	</a>
+	<div class='flex flex-col m-4'>
+		<a href={url} class='flex justify-center md:justify-start'>
+			<h2 class='h2 font-bold mb-1 hover:underline' transition:name={title}>
+				{title}
+			</h2>
 		</a>
-		<div class='flex flex-col m-4'>
-			<a href={url} class='flex justify-center md:justify-start'>
-				<h2
-					class='text-heading-2 font-bold mb-1 hover:underline'
-					transition:name={title}
-				>
-					{title}
-				</h2>
+		<span class='mb-4 flex justify-center md:justify-start text-caption'
+			>by&nbsp;
+			<a href=`/author/${slugify(author)}` class='hover:line-through'>
+				{titlefy(author)}
 			</a>
-			<span class='mb-4 flex justify-center md:justify-start text-caption'
-				>by&nbsp;
-				<a href=`/author/${slugify(author)}` class='hover:line-through'>
-					{titlefy(author)}
-				</a>
-				 &nbsp;&#x2981;&nbsp;{datefy(pubDate)}
-			</span>
-			<p class='mb-6 flex justify-center md:justify-start text-paragraph'>
-				{description}
-			</p>
-			<div
-				class='flex flex-wrap gap-2 justify-center md:justify-start text-paragraph'
-			>
-				{
-					tags.map((tag: string) => {
-						return (
-							<a href={'/categories/' + slugify(tag)}>
-								<p class='whitespace-nowrap border border-black p-1 rounded hover:bg-black hover:text-white'>
-									{slugify(tag)}
-								</p>
-							</a>
-						);
-					})
-				}
-			</div>
+			 &nbsp;&#x2981;&nbsp;{datefy(pubDate)}
+		</span>
+		<p class='mb-6 flex justify-center md:justify-start text-paragraph'>
+			{description}
+		</p>
+		<div
+			class='flex flex-wrap gap-2 justify-center md:justify-start text-paragraph'
+		>
+			{
+				tags.map((tag: string) => {
+					return (
+						<a href={'/categories/' + slugify(tag)}>
+							<p class='whitespace-nowrap border border-black p-1 rounded hover:bg-black hover:text-white'>
+								{slugify(tag)}
+							</p>
+						</a>
+					);
+				})
+			}
 		</div>
 	</div>
 </li>

@@ -13,13 +13,13 @@ const links: Array<{ url: string; title: string }> = [
 ];
 ---
 
-<nav class='flex justify-between p-4'>
+<nav class='flex justify-between space-margin'>
 	<a href='/posts' class='flex justify-center items-center'>
 		<Icon name='la:blog' class='mr-2 h-12 w-12' />
 
-		<p class='font-bold text-heading-6 p-2 pl-0'>Blog</p>
+		<p class='font-bold h3 p-2 pl-0'>Blog</p>
 	</a>
-	<ul class='flex gap-6 items-center'>
+	<ul class='flex space-items items-center'>
 		{
 			links.map(({ title, url }) => (
 				<li>

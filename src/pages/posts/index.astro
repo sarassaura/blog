@@ -7,6 +7,6 @@ const allPosts = await Astro.glob('./*.md');
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-	<h1 class='text-heading-1 my-6'>Articles</h1>
+	<h1 class='h1'>Articles</h1>
 	<CardContainer filteredPosts={allPosts} />
 </BaseLayout>
