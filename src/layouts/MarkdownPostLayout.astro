@@ -1,5 +1,5 @@
 ---
-import slugify from '../scripts/slugify';
+import { datefy, slugify, titlefy } from '../scripts';
 import BaseLayout from './BaseLayout.astro';
 import { Image } from 'astro:assets';
 
@@ -17,9 +17,9 @@ const { frontmatter } = Astro.props;
 				href=`/author/${slugify(frontmatter.author)}`
 				class='hover:line-through'
 			>
-				{frontmatter.author}
+				{titlefy(frontmatter.author)}
 			</a>
-			 &#128900; {frontmatter.pubDate.slice(0, 10)}</small
+			 &#128900; {datefy(frontmatter.pubDate)}</small
 		>
 		<Image
 			src={frontmatter.image.url}

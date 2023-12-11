@@ -1,6 +1,6 @@
 ---
 import { Image } from 'astro:assets';
-import slugify from '../scripts/slugify';
+import { datefy, slugify, titlefy } from '../scripts';
 const { post } = Astro.props;
 const url = post.url;
 const { image, title, pubDate, author, description, tags } = post.frontmatter;
@@ -39,9 +39,9 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 			<small class='mb-4 flex justify-center md:justify-start sm:text-sm'
 				>by&nbsp;
 				<a href=`/author/${slugify(author)}` class='hover:line-through'>
-					{author}
+					{titlefy(author)}
 				</a>
-				 🞄 {pubDate.slice(0, 10)}</small
+				 &nbsp;🞄&nbsp;{datefy(pubDate)}</small
 			>
 			<p class='mb-6 flex justify-center md:justify-start'>{description}</p>
 			<div class='flex flex-wrap gap-2 justify-center md:justify-start'>
