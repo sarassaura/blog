@@ -1,5 +1,16 @@
 ---
 import { Icon } from 'astro-icon';
+
+const links: Array<{ url: string; title: string }> = [
+	{
+		url: '/',
+		title: 'Home'
+	},
+	{
+		url: '/posts',
+		title: 'Blog'
+	}
+];
 ---
 
 <nav class='flex justify-between p-4'>
@@ -9,20 +20,14 @@ import { Icon } from 'astro-icon';
 		<p class='font-bold text-lg p-2 pl-0'>Blog</p>
 	</a>
 	<ul class='flex gap-6 items-center'>
-		<li>
-			<a href='/'>
-				<p class='p-2'>Home</p>
-			</a>
-		</li>
-		<li>
-			<a href='/about'>
-				<p class='p-2'>About</p>
-			</a>
-		</li>
-		<li>
-			<a href='/posts'>
-				<p class='p-2'>Blog</p>
-			</a>
-		</li>
+		{
+			links.map(({ title, url }) => (
+				<li>
+					<a href={url}>
+						<p class='p-2'>{title}</p>
+					</a>
+				</li>
+			))
+		}
 	</ul>
 </nav>

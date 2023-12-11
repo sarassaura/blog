@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import slugify from '../scripts/slugify';
 const { post } = Astro.props;
 const url = post.url;
 const { image, title, pubDate, author, description, tags } = post.frontmatter;
@@ -37,22 +38,19 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 			</a>
 			<small class='mb-4 flex justify-center md:justify-start sm:text-sm'
 				>by&nbsp;
-				<a
-					href=`/author/${author.replaceAll(' ', '-').toLowerCase()}`
-					class='hover:line-through'
-				>
+				<a href=`/author/${slugify(author)}` class='hover:line-through'>
 					{author}
 				</a>
-				 &#128900; {pubDate.slice(0, 10)}</small
+				 🞄 {pubDate.slice(0, 10)}</small
 			>
 			<p class='mb-6 flex justify-center md:justify-start'>{description}</p>
 			<div class='flex flex-wrap gap-2 justify-center md:justify-start'>
 				{
 					tags.map((tag: string) => {
 						return (
-							<a href={'/categories/' + tag.replaceAll(' ', '-').toLowerCase()}>
+							<a href={'/categories/' + slugify(tag)}>
 								<p class='whitespace-nowrap border border-black p-1 rounded hover:bg-black hover:text-white'>
-									{tag.replaceAll(' ', '-').toLowerCase()}
+									{slugify(tag)}
 								</p>
 							</a>
 						);

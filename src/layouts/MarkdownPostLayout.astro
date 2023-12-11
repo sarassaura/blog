@@ -1,4 +1,5 @@
 ---
+import slugify from '../scripts/slugify';
 import BaseLayout from './BaseLayout.astro';
 import { Image } from 'astro:assets';
 
@@ -13,7 +14,7 @@ const { frontmatter } = Astro.props;
 		<small class='mb-4'
 			>by
 			<a
-				href=`/author/${frontmatter.author.replaceAll(' ', '-').toLowerCase()}`
+				href=`/author/${slugify(frontmatter.author)}`
 				class='hover:line-through'
 			>
 				{frontmatter.author}

@@ -1,6 +1,8 @@
 ---
 import CardContainer from '../../components/CardContainer.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import slugify from '../../scripts/slugify';
+import titlefy from '../../scripts/titlefy';
 
 export async function getStaticPaths() {
 	const allPosts = await Astro.glob('./../posts/*.md');
@@ -8,9 +10,7 @@ export async function getStaticPaths() {
 
 	allPosts.map((post, id) => {
 		post.frontmatter.tags?.forEach((tag: string, num: number) => {
-			allPosts[id].frontmatter.tags[num] = tag
-				.replaceAll(' ', '-')
-				.toLowerCase();
+			allPosts[id].frontmatter.tags[num] = slugify(tag);
 			categories.add(allPosts[id].frontmatter.tags[num]);
 		});
 	});
@@ -53,7 +53,7 @@ const filteredPosts: Array<{
 <BaseLayout pageTitle={'Blog | ' + category!.replaceAll('-', ' ')}>
 	<h1 class='text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-4'>
 		Posts with <span class='underline decoration-sky-500'
-			>{category?.replaceAll('-', ' ')}</span
+			>{titlefy(category!)}</span
 		>
 	</h1>
 	<CardContainer {filteredPosts} />
