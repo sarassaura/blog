@@ -30,21 +30,25 @@ const { image, title, pubDate, author, description, tags } = post.frontmatter;
 		<div class='flex flex-col m-4'>
 			<a href={url} class='flex justify-center md:justify-start'>
 				<p
-					class='text-lg md:text-xl lg:text-2xl font-bold mb-1 hover:underline'
+					class='text-heading-4 font-bold mb-1 hover:underline'
 					transition:name={title}
 				>
 					{title}
 				</p>
 			</a>
-			<small class='mb-4 flex justify-center md:justify-start sm:text-sm'
+			<small class='mb-4 flex justify-center md:justify-start text-caption'
 				>by&nbsp;
 				<a href=`/author/${slugify(author)}` class='hover:line-through'>
 					{titlefy(author)}
 				</a>
-				 &nbsp;🞄&nbsp;{datefy(pubDate)}</small
+				 &nbsp;🞄&nbsp;{datefy(pubDate)}
+			</small>
+			<p class='mb-6 flex justify-center md:justify-start text-paragraph'>
+				{description}
+			</p>
+			<div
+				class='flex flex-wrap gap-2 justify-center md:justify-start text-paragraph'
 			>
-			<p class='mb-6 flex justify-center md:justify-start'>{description}</p>
-			<div class='flex flex-wrap gap-2 justify-center md:justify-start'>
 				{
 					tags.map((tag: string) => {
 						return (

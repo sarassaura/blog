@@ -17,14 +17,14 @@ const links: Array<{ url: string; title: string }> = [
 	<a href='/posts' class='flex justify-center items-center'>
 		<Icon name='la:blog' class='mr-2 h-12 w-12' />
 
-		<p class='font-bold text-lg p-2 pl-0'>Blog</p>
+		<p class='font-bold text-heading-6 p-2 pl-0'>Blog</p>
 	</a>
 	<ul class='flex gap-6 items-center'>
 		{
 			links.map(({ title, url }) => (
 				<li>
 					<a href={url}>
-						<p class='p-2'>{title}</p>
+						<p class='p-2 text-paragraph'>{title}</p>
 					</a>
 				</li>
 			))

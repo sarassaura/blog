@@ -8,10 +8,10 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={frontmatter.title}>
 	<div class='flex flex-col flex-grow'>
-		<h1 class='text-4xl mb-1' transition:name={frontmatter.title}>
+		<h1 class='text-heading-2 mb-1' transition:name={frontmatter.title}>
 			{frontmatter.title}
 		</h1>
-		<small class='mb-4'
+		<small class='mb-4 text-caption'
 			>by
 			<a
 				href=`/author/${slugify(frontmatter.author)}`
@@ -33,6 +33,8 @@ const { frontmatter } = Astro.props;
 			class='rounded-l my-8'
 			transition:name={frontmatter.image.alt}
 		/>
-		<slot />
+		<div class='text-paragraph'>
+			<slot />
+		</div>
 	</div>
 </BaseLayout>
