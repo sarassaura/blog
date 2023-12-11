@@ -15,6 +15,12 @@ body {
 	min-height: 100%;
 }
 
+@media (min-width: 360px) {
+	.container {
+		max-width: 640px;
+	}
+}
+
 .text-heading-1 {
 	@apply text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
 }
@@ -44,5 +50,5 @@ body {
 }
 
 .text-caption {
-	@apply text-xs xs:text-xs sm:text-sm;
+	@apply text-xs xs:text-xs sm:text-sm !important;
 }
