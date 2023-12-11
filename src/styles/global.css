@@ -53,6 +53,26 @@ body {
 	@apply text-xs xs:text-xs sm:text-sm;
 }
 
-small {
-	@apply text-caption !important;
+.mdx {
+	h1 {
+		@apply text-heading-1;
+	}
+	h2 {
+		@apply text-heading-2;
+	}
+	h3 {
+		@apply text-heading-3;
+	}
+	h4 {
+		@apply text-heading-4;
+	}
+	h5 {
+		@apply text-heading-5;
+	}
+	h6 {
+		@apply text-heading-6;
+	}
+	p {
+		@apply my-2 leading-6;
+	}
 }

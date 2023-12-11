@@ -8,7 +8,7 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={frontmatter.title}>
 	<div class='flex flex-col flex-grow'>
-		<h1 class='text-heading-2 mb-1' transition:name={frontmatter.title}>
+		<h1 class='text-heading-1 mb-1' transition:name={frontmatter.title}>
 			{frontmatter.title}
 		</h1>
 		<span class='text-caption mb-4'>
@@ -33,7 +33,7 @@ const { frontmatter } = Astro.props;
 			class='rounded-l my-8'
 			transition:name={frontmatter.image.alt}
 		/>
-		<div class='text-paragraph'>
+		<div class='text-paragraph mdx'>
 			<slot />
 		</div>
 	</div>
