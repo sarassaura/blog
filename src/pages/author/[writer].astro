@@ -13,13 +13,12 @@ export async function getStaticPaths() {
 		authors.add(allPosts[id].frontmatter.author);
 	});
 
-	const params = new Array();
-
-	authors.forEach((one) => {
-		params.push({ params: { writer: one }, props: { posts: allPosts } });
+	return Array.from(authors).map((one) => {
+		return {
+			params: { writer: one },
+			props: { posts: allPosts }
+		};
 	});
-
-	return params;
 }
 
 const { writer } = Astro.params;

@@ -14,13 +14,9 @@ export async function getStaticPaths() {
 		});
 	});
 
-	const params = new Array();
-
-	categories.forEach((one) => {
-		params.push({ params: { category: one }, props: { posts: allPosts } });
+	return Array.from(categories).map((one) => {
+		return { params: { category: one }, props: { posts: allPosts } };
 	});
-
-	return params;
 }
 
 const { category } = Astro.params;
