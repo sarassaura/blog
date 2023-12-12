@@ -3,27 +3,24 @@ import { datefy, slugify, titlefy } from '../scripts';
 import BaseLayout from './BaseLayout.astro';
 import { Image } from 'astro:assets';
 
-const { frontmatter } = Astro.props;
+const { data } = Astro.props;
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={data.title}>
 	<div class='flex flex-col flex-grow'>
 		<h1 class='h1 mb-1'>
-			{frontmatter.title}
+			{data.title}
 		</h1>
 		<span class='text-caption mb-4'>
 			by
-			<a
-				href=`/author/${slugify(frontmatter.author)}`
-				class='hover:line-through'
-			>
-				{titlefy(frontmatter.author)}
+			<a href=`/author/${slugify(data.author)}` class='hover:line-through'>
+				{titlefy(data.author)}
 			</a>
-			 &#x2981; {datefy(frontmatter.pubDate)}
+			 &#x2981; {datefy(data.pubDate)}
 		</span>
 		<Image
-			src={frontmatter.image.url}
-			alt={frontmatter.image.alt}
+			src={data.image.url}
+			alt={data.image.alt}
 			object-fit='cover'
 			decoding='async'
 			quality='low'
@@ -31,7 +28,7 @@ const { frontmatter } = Astro.props;
 			width={300}
 			height={150}
 			class='rounded-l my-8'
-			transition:name={frontmatter.image.alt}
+			transition:name={data.image.alt}
 		/>
 		<div class='text-paragraph mdx'>
 			<slot />

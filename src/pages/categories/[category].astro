@@ -1,16 +1,17 @@
 ---
+import { getCollection } from 'astro:content';
 import CardContainer from '../../components/CardContainer.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { slugify, titlefy } from '../../scripts';
 
 export async function getStaticPaths() {
-	const allPosts = await Astro.glob('./../posts/*.md');
+	const allPosts = await getCollection('posts');
 	const categories = new Set();
 
 	allPosts.map((post, id) => {
-		post.frontmatter.tags?.forEach((tag: string, num: number) => {
-			allPosts[id].frontmatter.tags[num] = slugify(tag);
-			categories.add(allPosts[id].frontmatter.tags[num]);
+		post.data.tags?.forEach((tag: string, num: number) => {
+			allPosts[id].data.tags[num] = slugify(tag);
+			categories.add(allPosts[id].data.tags[num]);
 		});
 	});
 
@@ -23,7 +24,7 @@ const { category } = Astro.params;
 const { posts } = Astro.props;
 
 const filteredPosts: Array<{
-	frontmatter: {
+	data: {
 		image: string;
 		title: string;
 		pubDate: string;
@@ -33,7 +34,7 @@ const filteredPosts: Array<{
 	};
 }> = posts.filter(
 	(post: {
-		frontmatter: {
+		data: {
 			image: string;
 			title: string;
 			pubDate: string;
@@ -41,7 +42,7 @@ const filteredPosts: Array<{
 			description: string;
 			tags: string;
 		};
-	}) => post.frontmatter.tags?.includes(category as string)
+	}) => post.data.tags?.includes(category as string)
 );
 ---
 

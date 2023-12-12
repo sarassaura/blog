@@ -7,7 +7,7 @@ const { filteredPosts } = Astro.props;
 	{
 		filteredPosts.map(
 			(post: {
-				frontmatter: {
+				data: {
 					image: string;
 					title: string;
 					pubDate: string;

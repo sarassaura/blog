@@ -1,3 +1,4 @@
-export default function datefy(str: string) {
-	return str.slice(0, 10);
+export default function datefy(date: Date) {
+	const time = new Date(date);
+	return time.toLocaleDateString('en-US');
 }

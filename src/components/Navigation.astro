@@ -4,17 +4,13 @@ import { Icon } from 'astro-icon';
 const links: Array<{ url: string; title: string }> = [
 	{
 		url: '/',
-		title: 'Home'
-	},
-	{
-		url: '/posts',
 		title: 'Blog'
 	}
 ];
 ---
 
 <nav class='flex justify-between space-margin'>
-	<a href='/posts' class='flex justify-center items-center'>
+	<a href='/' class='flex justify-center items-center'>
 		<Icon name='la:blog' class='mr-2 h-12 w-12' />
 
 		<p class='font-bold h3 p-2 pl-0'>Blog</p>

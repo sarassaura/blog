@@ -2,8 +2,8 @@
 import { Image } from 'astro:assets';
 import { datefy, slugify, titlefy } from '../scripts';
 const { post } = Astro.props;
-const url = post.url;
-const { image, title, pubDate, author, description, tags } = post.frontmatter;
+const url = post.slug;
+const { image, title, pubDate, author, description, tags } = post.data;
 ---
 
 <li class='card'>
