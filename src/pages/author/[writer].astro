@@ -6,7 +6,7 @@ import { slugify, titlefy } from '../../scripts';
 
 export async function getStaticPaths() {
 	const allPosts = await getCollection('posts');
-	const authors = new Set();
+	const authors: Set<string> = new Set();
 
 	allPosts.forEach((post, id) => {
 		allPosts[id].data.author = slugify(post.data.author);

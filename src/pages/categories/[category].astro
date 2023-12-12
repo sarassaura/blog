@@ -6,7 +6,7 @@ import { slugify, titlefy } from '../../scripts';
 
 export async function getStaticPaths() {
 	const allPosts = await getCollection('posts');
-	const categories = new Set();
+	const categories: Set<string> = new Set();
 
 	allPosts.map((post, id) => {
 		post.data.tags?.forEach((tag: string, num: number) => {
