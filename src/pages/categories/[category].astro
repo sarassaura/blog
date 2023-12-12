@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import CardContainer from '../../components/CardContainer.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { slugify, titlefy } from '../../scripts';
@@ -20,29 +20,15 @@ export async function getStaticPaths() {
 	});
 }
 
+type Props = {
+	posts: CollectionEntry<'posts'>[];
+};
+
 const { category } = Astro.params;
 const { posts } = Astro.props;
 
-const filteredPosts: Array<{
-	data: {
-		image: string;
-		title: string;
-		pubDate: string;
-		author: string;
-		description: string;
-		tags: string;
-	};
-}> = posts.filter(
-	(post: {
-		data: {
-			image: string;
-			title: string;
-			pubDate: string;
-			author: string;
-			description: string;
-			tags: string;
-		};
-	}) => post.data.tags?.includes(category as string)
+const filteredPosts = posts.filter((post) =>
+	post.data.tags?.includes(category!)
 );
 ---
 

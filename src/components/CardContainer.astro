@@ -1,21 +1,14 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 import PostCard from './PostCard.astro';
+
+type Props = {
+	filteredPosts: CollectionEntry<'posts'>[];
+};
+
 const { filteredPosts } = Astro.props;
 ---
 
 <ul class='cardContainer space-cards'>
-	{
-		filteredPosts.map(
-			(post: {
-				data: {
-					image: string;
-					title: string;
-					pubDate: string;
-					author: string;
-					description: string;
-					tags: string;
-				};
-			}) => <PostCard {post} />
-		)
-	}
+	{filteredPosts.map((post) => <PostCard {post} />)}
 </ul>

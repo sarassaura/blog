@@ -1,5 +1,5 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import CardContainer from '../../components/CardContainer.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import slugify from '../../scripts/slugify';
@@ -22,30 +22,14 @@ export async function getStaticPaths() {
 	});
 }
 
+type Props = {
+	posts: CollectionEntry<'posts'>[];
+};
+
 const { writer } = Astro.params;
 const { posts } = Astro.props;
 
-const filteredPosts: Array<{
-	data: {
-		image: string;
-		title: string;
-		pubDate: string;
-		author: string;
-		description: string;
-		tags: string;
-	};
-}> = posts.filter(
-	(post: {
-		data: {
-			image: string;
-			title: string;
-			pubDate: string;
-			author: string;
-			description: string;
-			tags: string;
-		};
-	}) => post.data.author == writer
-);
+const filteredPosts = posts.filter((post) => post.data.author == writer);
 ---
 
 <BaseLayout pageTitle={titlefy(writer!)}>

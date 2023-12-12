@@ -1,8 +1,12 @@
 ---
+import type { CollectionEntry } from 'astro:content';
 import { datefy, slugify, titlefy } from '../scripts';
 import BaseLayout from './BaseLayout.astro';
 import { Image } from 'astro:assets';
 
+type Props = {
+	data: CollectionEntry<'posts'>['data'];
+};
 const { data } = Astro.props;
 ---
 

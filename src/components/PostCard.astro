@@ -1,6 +1,12 @@
 ---
 import { Image } from 'astro:assets';
 import { datefy, slugify, titlefy } from '../scripts';
+import type { CollectionEntry } from 'astro:content';
+
+type Props = {
+	post: CollectionEntry<'posts'>;
+};
+
 const { post } = Astro.props;
 const url = post.slug;
 const { image, title, pubDate, author, description, tags } = post.data;
