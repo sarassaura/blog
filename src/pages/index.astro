@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
-import CardContainer from '../components/CardContainer.astro';
-import BaseLayout from '../layouts/BaseLayout.astro';
+import CardContainer from '@components/CardContainer.astro';
+import BaseLayout from '@layouts/BaseLayout.astro';
 
 const pageTitle = 'Blog';
 const posts = await getCollection('posts');
