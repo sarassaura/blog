@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://blog-for-learning-it-all.vercel.app/sitemap-index.xml
