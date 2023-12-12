@@ -14,7 +14,7 @@ const { image, title, pubDate, author, description, tags } = post.data;
 
 <li class='card'>
 	<a
-		href={url}
+		href={'/' + url}
 		class='flex justify-center items-center bg-black min-h-[150px] sm:min-h-[150px]'
 	>
 		<div class='h-[150px] flex items-center justify-center'>
@@ -33,7 +33,7 @@ const { image, title, pubDate, author, description, tags } = post.data;
 		</div>
 	</a>
 	<div class='flex flex-col m-4'>
-		<a href={url} class='flex justify-center md:justify-start'>
+		<a href={'/' + url} class='flex justify-center md:justify-start'>
 			<h2 class='h2 font-bold mb-1 hover:underline'>
 				{title}
 			</h2>
