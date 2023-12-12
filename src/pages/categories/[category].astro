@@ -32,11 +32,14 @@ const filteredPosts = posts.filter((post) =>
 );
 ---
 
-<BaseLayout pageTitle={'Blog | ' + titlefy(category!)}>
-	<h1 class='h1'>
-		Posts with <span class='underline decoration-sky-500'
-			>{titlefy(category!)}</span
-		>
-	</h1>
-	<CardContainer {filteredPosts} />
-</BaseLayout>
+{
+	category && (
+		<BaseLayout pageTitle={'Blog | ' + titlefy(category!)}>
+			<h1 class='h1'>
+				Posts with{' '}
+				<span class='underline decoration-sky-500'>{titlefy(category!)}</span>
+			</h1>
+			<CardContainer {filteredPosts} />
+		</BaseLayout>
+	)
+}

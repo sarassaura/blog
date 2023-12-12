@@ -29,15 +29,15 @@ const { writer } = Astro.params;
 const { posts } = Astro.props;
 
 const filteredPosts = posts.filter((post) => post.data.author == writer);
-console.log(
-	'🚀 ~ file: [writer].astro:33 ~ titlefy(writer!):',
-	titlefy(writer!)
-);
 ---
 
-<BaseLayout pageTitle={titlefy(writer!)}>
-	<h1 class='h1'>
-		Written by <span class='font-medium'>{titlefy(writer!)}</span>
-	</h1>
-	<CardContainer {filteredPosts} />
-</BaseLayout>
+{
+	writer && (
+		<BaseLayout pageTitle={titlefy(writer)}>
+			<h1 class='h1'>
+				Written by <span class='font-medium'>{titlefy(writer)}</span>
+			</h1>
+			<CardContainer {filteredPosts} />
+		</BaseLayout>
+	)
+}
