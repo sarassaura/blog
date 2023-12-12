@@ -16,7 +16,10 @@ export async function getStaticPaths() {
 	});
 
 	return Array.from(categories).map((one) => {
-		return { params: { category: one }, props: { posts: allPosts } };
+		return {
+			params: { category: one },
+			props: { posts: allPosts.filter((post) => post.data.tags?.includes(one)) }
+		};
 	});
 }
 
@@ -26,20 +29,16 @@ type Props = {
 
 const { category } = Astro.params;
 const { posts } = Astro.props;
-
-const filteredPosts = posts.filter((post) =>
-	post.data.tags?.includes(category!)
-);
 ---
 
 {
 	category && (
-		<BaseLayout pageTitle={'Blog | ' + titlefy(category!)}>
+		<BaseLayout pageTitle={'Blog | ' + titlefy(category)}>
 			<h1 class='h1'>
 				Posts with{' '}
-				<span class='underline decoration-sky-500'>{titlefy(category!)}</span>
+				<span class='underline decoration-sky-500'>{titlefy(category)}</span>
 			</h1>
-			<CardContainer {filteredPosts} />
+			<CardContainer {posts} />
 		</BaseLayout>
 	)
 }
