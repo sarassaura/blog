@@ -6,6 +6,7 @@ export const GET = async (context: APIContext) => {
 	const posts = await getCollection('posts');
 
 	return rss({
+		stylesheet: '/rss/styles.xsl',
 		title: "Sarah's Yukino | Blog",
 		description: 'A blog about everything I know!',
 		site: context.site!,
@@ -13,6 +14,7 @@ export const GET = async (context: APIContext) => {
 			title: post.data.title,
 			pubDate: post.data.pubDate,
 			description: post.data.description,
+			author: post.data.author,
 			link: `/${post.slug}/`
 		})),
 		customData: `<language>en-us</language>`
