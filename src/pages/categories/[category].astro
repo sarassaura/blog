@@ -34,7 +34,7 @@ const { posts } = Astro.props as Props;
 {
 	category && (
 		<BaseLayout pageTitle={'Blog | ' + titlefy(category)}>
-			<h1 class='h1'>
+			<h1 class='text-title'>
 				Posts with{' '}
 				<span class='underline decoration-sky-500'>{titlefy(category)}</span>
 			</h1>

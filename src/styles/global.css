@@ -48,27 +48,27 @@ ol {
 
 	& li {
 		@apply my-4;
-
-		& > p {
-			display: inline;
-		}
 	}
 }
 
 .display {
-	@apply text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4;
+	@apply text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
 }
 
 .h1 {
-	@apply text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl mb-4;
+	@apply text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl;
 }
 
 .h2 {
-	@apply text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl mb-4;
+	@apply text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl;
 }
 
 .h3 {
 	@apply text-base sm:text-lg md:text-xl;
+}
+
+.text-title {
+	@apply h1 mb-4;
 }
 
 .text-paragraph {
@@ -89,6 +89,29 @@ ol {
 	h3 {
 		@apply h3;
 	}
+}
+
+.mdx :is(h2, h3, h4, h5, h6) {
+	@apply mb-4;
+}
+
+.mdx :is(h1) {
+	@apply mb-1;
+}
+
+.mdx :is(p) {
+	display: inline;
+	word-break: break-word;
+	hyphens: auto;
+}
+
+.mdx :is(a) {
+	text-decoration: underline;
+	@apply text-stone-700;
+}
+
+.mdx :is(img) {
+	@apply my-4 mx-auto;
 }
 
 .space-margin {
