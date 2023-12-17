@@ -48,6 +48,10 @@ ol {
 
 	& li {
 		@apply my-4;
+
+		& ol {
+			@apply ml-8 list-inside list-disc;
+		}
 	}
 }
 
@@ -106,8 +110,7 @@ ol {
 }
 
 .mdx :is(a) {
-	text-decoration: underline;
-	@apply text-stone-700;
+	@apply text-stone-700 underline hover:line-through;
 }
 
 .mdx :is(img) {

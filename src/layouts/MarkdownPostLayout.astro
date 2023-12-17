@@ -17,9 +17,7 @@ const { data } = Astro.props;
 		</h1>
 		<span class='text-caption mb-2'>
 			by
-			<a href=`/author/${slugify(data.author)}` class='hover:line-through'>
-				{titlefy(data.author)}
-			</a>
+			<a href=`/author/${slugify(data.author)}`>{titlefy(data.author)}</a>
 			 &#x2981; {datefy(data.pubDate)}
 		</span>
 		<Image
