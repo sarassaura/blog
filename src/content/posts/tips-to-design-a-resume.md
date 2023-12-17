@@ -19,4 +19,4 @@ tags: ['design', 'resume']
 
 5. **Never show the level of your skills**: Your perception about how much you know something cannot be trusted and will probably be taken in the wrong way.
 
-6. **Make it simple**: The focus should be in the text, they will see a lot of resumes so don't make it overwhelming.
+6. **Make it simple**: The focus should be on the text, they will see a lot of resumes so don't make it overwhelming, the people who gets interviews won't risk by calling too much attention.
