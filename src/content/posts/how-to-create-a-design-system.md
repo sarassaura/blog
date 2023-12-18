@@ -9,8 +9,14 @@ pubDate: 2023-12-16
 tags: ['design', 'resume']
 ---
 
-1. **Colors**
+1.  **Colors**:
 
-   1. Choose your color palette
+    1. Color Scheme:
 
-2. **Typography**
+       1. Monochromatic: Used for minimal and less distracting designs.
+       2. Analogous: Colors next to each other on the color wheel.
+       3. Complimentary: Colors on the opposite side of the color wheel.
+       4. Split-Complimentary: One primary color and two secondaries on the opposite side.
+       5. Triadic: Forms a triangle on the color wheel.
+
+1.  **Typography**

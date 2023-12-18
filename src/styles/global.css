@@ -51,6 +51,13 @@ ol {
 
 		& ol {
 			@apply ml-8 list-inside list-disc;
+
+			& li {
+				& ol {
+					@apply ml-8 list-inside;
+					list-style-type: square;
+				}
+			}
 		}
 	}
 }
