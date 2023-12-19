@@ -32,7 +32,9 @@ const { image, title, pubDate, author, description, tags } = post.data;
 			/>
 		</div>
 	</a>
-	<div class='flex flex-col m-4'>
+	<div
+		class='flex flex-col flex-grow rounded-b md:rounded-r md:rounded-b-none lg:rounded-r-none lg:rounded-b p-4 bg-slate-100 border-t md:border-t-0 lg:border-t md:border-l lg:border-l-0 border-black'
+	>
 		<a href={'/' + url} class='flex justify-center md:justify-start'>
 			<h2 class='h2 font-bold hover:underline'>
 				{title}
@@ -45,7 +47,9 @@ const { image, title, pubDate, author, description, tags } = post.data;
 			</a>
 			 &nbsp;&#x2981;&nbsp;{datefy(pubDate)}
 		</span>
-		<p class='mb-6 flex justify-center md:justify-start text-paragraph'>
+		<p
+			class='mb-6 flex flex-grow justify-center md:justify-start text-paragraph'
+		>
 			{description}
 		</p>
 		<div
