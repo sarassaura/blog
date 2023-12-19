@@ -55,7 +55,7 @@ ol {
 			& li {
 				& ol {
 					@apply ml-8 list-inside;
-					list-style-type: square;
+					list-style-type: circle;
 				}
 			}
 		}

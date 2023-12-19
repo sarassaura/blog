@@ -15,9 +15,9 @@ const { image, title, pubDate, author, description, tags } = post.data;
 <li class='card'>
 	<a
 		href={'/' + url}
-		class='flex justify-center items-center bg-black min-h-[150px] sm:min-h-[150px]'
+		class='flex justify-center items-center bg-black min-h-[180px] sm:min-h-[180px]'
 	>
-		<div class='h-[150px] flex items-center justify-center'>
+		<div class='h-[180px] flex items-center justify-center'>
 			<Image
 				src={image.url}
 				alt={image.alt}
@@ -26,8 +26,8 @@ const { image, title, pubDate, author, description, tags } = post.data;
 				quality='low'
 				format='webp'
 				width={300}
-				height={150}
-				class='max-h-[150px]'
+				height={180}
+				class='max-h-[180px]'
 				transition:name={image.alt}
 			/>
 		</div>
