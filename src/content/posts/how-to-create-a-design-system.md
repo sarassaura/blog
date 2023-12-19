@@ -11,7 +11,18 @@ tags: ['design', 'resume']
 
 1.  **Colors**
 
-    1. Color Scheme:
+    1. Color System
+
+       1. RGB: It's used by computers/screens, use it if you're a developer/designer.
+       2. CMYK ou RYB: It's used for paints, use it for ink.
+
+    2. Properties
+
+       1. Hue: Red, Magenta, Blue, Cyan, Green, Yellow.
+       2. Value: How dark (shaded) or bright (tinted) a color is.
+       3. Saturation: The intensity of the color from vivid to grayish (toned)
+
+    3. Color Scheme:
 
        1. Monochromatic: Used for minimal and less distracting designs.
        2. Analogous: Colors next to each other on the color wheel.
@@ -19,7 +30,7 @@ tags: ['design', 'resume']
        4. Split-Complimentary: One primary color and two secondaries on the opposite side.
        5. Triadic: Forms a triangle on the color wheel.
 
-    2. Color Psychology
+    4. Color Psychology
 
        1. Yellow: Joy, Optimism, Fresh.
        2. Orange: Warmth, Enthusiasm, Creativity.
@@ -28,19 +39,8 @@ tags: ['design', 'resume']
        5. Blue: Trust, Confidence, Calm.
        6. Green: Nature, Safety, Balance.
 
-    3. Properties
-
-       1. Hue: Red, Magenta, Blue, Cyan, Green, Yellow.
-       2. Value: How dark (shaded) or bright (tinted) a color is.
-       3. Saturation: The intensity of the color from vivid to grayish (toned)
-
-    4. The 60/30/10 Rule
+    5. The 60/30/10 Rule
 
        1. The distribution of colors throughout the design should be 60% Primary color, 30% Secondary color and 10% Accent color. In case you have more colors with the same role then divide the percentages equally in respect to each role.
-
-    5. Color System
-
-       1. RGB: It's used by computers/screens, use it if you're a developer/designer.
-       2. CMYK ou RYB: It's used for paints, use it for ink.
 
 1.  **Typography**
