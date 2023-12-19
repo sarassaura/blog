@@ -116,6 +116,11 @@ ol {
 	hyphens: auto;
 }
 
+.mdx :is(li) {
+	word-break: break-word;
+	hyphens: auto;
+}
+
 .mdx :is(a) {
 	@apply text-stone-700 underline hover:line-through;
 }

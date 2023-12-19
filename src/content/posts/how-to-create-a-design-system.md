@@ -1,7 +1,7 @@
 ---
 title: How to Create a Design System
 author: Sarah Yukino Nakada
-description: 'How to create a design system'
+description: How to create a design system
 image:
   url: 'https://global.discourse-cdn.com/freecodecamp/original/3X/8/8/88d4b9b1a0011427f66884cd732c3f85c1aa4ae5.png'
   alt: 'Thumbnail of Astro arcs.'
@@ -36,7 +36,7 @@ tags: ['design', 'resume']
 
     4. The 60/30/10 Rule
 
-       1. Use 60%
+       1. The distribution of colors throughout the design should be 60% Primary color, 30% Secondary color and 10% Accent color. In case you have more colors with the same role then divide the percentages equally in respect to each role.
 
     5. Color System
 
