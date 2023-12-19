@@ -6,7 +6,7 @@ image:
   url: 'https://global.discourse-cdn.com/freecodecamp/original/3X/8/8/88d4b9b1a0011427f66884cd732c3f85c1aa4ae5.png'
   alt: 'Thumbnail of Astro arcs.'
 pubDate: 2023-12-16
-tags: ['design', 'resume']
+tags: ['design']
 ---
 
 1.  **Colors**
