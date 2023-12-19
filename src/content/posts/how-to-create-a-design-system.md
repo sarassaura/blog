@@ -14,7 +14,7 @@ tags: ['design', 'resume']
     1. Color System
 
        1. RGB: It's used by computers/screens, use it if you're a developer/designer.
-       2. CMYK ou RYB: It's used for paints, use it for ink.
+       2. CMYK or RYB: It's used for paints, use it for ink.
 
     2. Properties
 
