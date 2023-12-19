@@ -15,19 +15,19 @@ const { image, title, pubDate, author, description, tags } = post.data;
 <li class='card'>
 	<a
 		href={'/' + url}
-		class='flex justify-center items-center bg-black min-h-[180px] sm:min-h-[180px]'
+		class='flex justify-center items-center bg-black min-h-[240px] sm:min-h-[240px]'
 	>
-		<div class='h-[180px] flex items-center justify-center'>
+		<div class='h-[240px] flex items-center justify-center'>
 			<Image
 				src={image.url}
 				alt={image.alt}
-				object-fit='scale-down'
+				object-fit='cover'
 				decoding='async'
 				quality='low'
 				format='webp'
 				width={300}
-				height={180}
-				class='max-h-[180px]'
+				height={240}
+				class='max-h-[240px] object-cover object-top'
 				transition:name={image.alt}
 			/>
 		</div>

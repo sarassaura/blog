@@ -3,7 +3,7 @@ title: Tips to Design a Resume
 author: Sarah Yukino Nakada
 description: 'Some essential guidelines to not blow up your resume'
 image:
-  url: 'https://docs.astro.build/assets/arc.webp'
+  url: 'https://marketplace.canva.com/EAFRuCp3DcY/1/0/1131w/canva-black-white-minimalist-cv-resume-f5JNR-K5jjw.jpg'
   alt: 'Thumbnail of Astro arcs.'
 pubDate: 2023-12-16
 tags: ['design', 'resume']
