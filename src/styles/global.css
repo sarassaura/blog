@@ -8,7 +8,7 @@ body {
 }
 
 html {
-	height: 100%;
+	@apply xs:h-full;
 }
 
 body {
@@ -47,15 +47,33 @@ ol {
 	@apply list-inside list-decimal;
 
 	& li {
-		@apply my-4;
+		@apply mt-4 mb-8;
+
+		& p {
+			@apply text-lg;
+		}
+
+		& ::marker {
+			@apply text-lg;
+		}
 
 		& ol {
-			@apply ml-8 list-inside list-disc;
+			@apply sm:ml-8 list-inside list-disc;
 
 			& li {
+				@apply mt-8 mb-4;
+
+				& p {
+					@apply text-lg;
+				}
+
 				& ol {
-					@apply ml-8 list-inside;
+					@apply xs:ml-8 list-inside;
 					list-style-type: circle;
+
+					& li {
+						@apply my-4;
+					}
 				}
 			}
 		}
