@@ -126,7 +126,7 @@ ol {
 }
 
 .mdx :is(img) {
-	@apply my-4 mx-auto;
+	@apply my-4 mx-auto max-h-80 w-auto;
 }
 
 .space-margin {
