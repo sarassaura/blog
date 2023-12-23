@@ -54,7 +54,7 @@ tags: ['design']
        1. Serif: A small stroke at the beginning or the end of the stroke on the letter.
        2. Weight: Thin, Extra Light, Light, Regular, Medium, Semi Bold, Bold, Extra Bold, Black.
        3. Style: Angled, true italics letters a, f, and g, are much different than non-italics.
-       4. Letter Spacing: Space between letters, also known as kerning.
+       4. Letter Spacing: Space between letters, also known as tracking.
        5. X-height: The height of the lowercase in proportion to the uppercase letter.
        6. Character Width: Average, Condensed, Extended.
        7. Stroke Contrast: The difference between the thicker and thinner strokes.
