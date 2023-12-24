@@ -4,7 +4,7 @@ author: Sarah Yukino Nakada
 description: How to create a design system
 image:
   url: 'https://miro.medium.com/v2/resize:fit:1100/format:webp/0*oJmPr9ldEfbiQOC9.png'
-  alt: 'Thumbnail of Astro arcs.'
+  alt: 'Design System'
 pubDate: 2023-12-16
 tags: ['design']
 ---
