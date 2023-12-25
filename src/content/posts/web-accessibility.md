@@ -8,3 +8,6 @@ image:
 pubDate: 2023-12-24
 tags: ['accessibility']
 ---
+
+1. Color Contrast
+2. Semantic HTML

@@ -11,7 +11,7 @@ const { data } = Astro.props;
 ---
 
 <BaseLayout pageTitle={data.title}>
-	<div class='flex flex-col flex-grow mdx'>
+	<div class='flex items-center flex-col flex-grow mdx w-[70ch] max-w-full'>
 		<h1 class='h1'>
 			{data.title}
 		</h1>
