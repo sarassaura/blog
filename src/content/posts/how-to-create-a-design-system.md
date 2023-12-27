@@ -45,7 +45,7 @@ tags: ['design']
 
        1. Fluorescent Tones: Extremely saturated and tinted colors. S: 100-63, V: 100-82.
        2. Neutral Tones: Extremely desaturated and tinted colors. S: 1-10, V: 99-70.
-       3. Earth Tones: Moderate saturation and normal value S: 36-41, V: 77-36.
+       3. Earth Tones: Moderate saturation and shaded. S: 36-41, V: 77-36.
        4. Pastel Tones: Low saturation and tinted colors. S: 14-21, V: 89-96.
        5. Jewel Tones: Highly saturated and tinted. S: 83-73, V: 76-56.
        6. Shades: Black and White. S: 0, V: 100-0.
