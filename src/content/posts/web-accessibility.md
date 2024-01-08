@@ -11,9 +11,8 @@ tags: ['accessibility']
 
 1. **Color**
 
-   1. Contrast Ratio: It's the contrast between the text and background color values.
+   1. Contrast Ratio: It's the contrast between the text and background color values, it ensures readability, especially for people with color deficiency.
 
-      1. Ensures readability, especially for people with color deficiency.
       1. It's calculated by dividing the lighter value by the darker value.
       1. The values range from 0 to 1, where 0 is black and 1 is white.
       1. The exact formula is (V1 + 0.05) / (V2 + 0.05). Lighter / Darker.
